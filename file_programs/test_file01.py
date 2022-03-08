@@ -4,11 +4,15 @@ import stop_word_removal, stop_word_removal_with_set
 import pytest
 
 def test_no_words():
-    with pytest.raises(Exception):
         assert count_words.count_words('test1.txt') == 43
 
 def test_unique_words():
     assert unique_words.count_unique('test1.txt') == 29
+
+
+def test_histogram():
+    assert unique_words.create_histogram('This a a a',dict) == {'This':1,'a':3}
+
 
 @pytest.mark.stopwordremoval
 def test_stop_word_removal_with_spaces_in_punctuation():
