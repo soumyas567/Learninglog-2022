@@ -14,6 +14,3 @@
 
 
 
-
-
-- [Python for you and me](https://pymbook.readthedocs.io/en/latest/)
